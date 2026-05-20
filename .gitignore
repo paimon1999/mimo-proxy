@@ -1,0 +1,52 @@
+# === Rust / Cargo ===
+/target/
+**/*.rs.bk
+Cargo.lock
+
+# === IDE / Editor ===
+# JetBrains (IntelliJ / CLion / RustRover)
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim / Neovim
+*.swp
+*.swo
+*~
+tags
+.tags
+
+# Emacs
+*~
+\#*\#
+.#*
+
+# === OS Generated ===
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# === Misc ===
+*.log
+*.bak
+*.tmp
+*.env
+.env.local
+.env.*.local
