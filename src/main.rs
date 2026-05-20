@@ -12,8 +12,7 @@ use percent_encoding::percent_decode_str;
 use reqwest::Client;
 use serde_json::{json, Value as JsonValue};
 use std::{
-    collections::hash_map::DefaultHasher,
-    HashMap,
+    collections::{hash_map::DefaultHasher, HashMap},
     hash::{Hash, Hasher},
     sync::Arc,
     time::{Duration, Instant},
@@ -103,7 +102,7 @@ async fn main() {
         .route("/health", get(health_check))
         .fallback(any(proxy_handler))
         .layer(CorsLayer::permissive())
-        .with_state(Arc::new(state));
+        .with_state(state);
 
     let addr = format!("127.0.0.1:{}", LISTEN_PORT);
     let listener = tokio::net::TcpListener::bind(&addr)
